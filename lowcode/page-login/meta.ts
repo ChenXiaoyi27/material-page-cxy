@@ -11,7 +11,7 @@ const PageLoginMeta: IPublicTypeComponentMetadata = {
   "devMode": "proCode",
   "npm": {
     "package": "material-page-cxy",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "exportName": "PageLogin",
     "main": "src\\index.tsx",
     "destructuring": true,
@@ -61,7 +61,7 @@ const PageLoginMeta: IPublicTypeComponentMetadata = {
         "setter": {
           "componentName": "StringSetter",
           "isRequired": true,
-          "initialValue": "600"
+          "initialValue": "700"
         }
       },
       {
@@ -75,14 +75,11 @@ const PageLoginMeta: IPublicTypeComponentMetadata = {
         "name": "form",
         "setter": {
           "componentName": "SlotSetter",
-          "props": {
-            "mode": "node"
+          isRequired: true,
+          initialValue: {
+            type: 'JSSlot',
+            value: [],
           },
-          "isRequired": true,
-          "initialValue": {
-            "type": "JSSlot",
-            "value": []
-          }
         }
       }
     ],
@@ -94,7 +91,7 @@ const PageLoginMeta: IPublicTypeComponentMetadata = {
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    "title": "PageLogin",
+    "title": "登录页",
     "screenshot": "https://chenxiaoyi27.oss-cn-guangzhou.aliyuncs.com/picture/screenshot_login.png",
     "schema": {
       "componentName": "PageLogin",

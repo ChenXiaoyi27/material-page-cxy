@@ -1,6 +1,6 @@
 {
   "name": "material-page-cxy",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "material-page-cxy",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -9,6 +9,14 @@
     ".": {
       "import": "./es/index.js",
       "require": "./lib/index.js"
+    },
+    "./prototype": {
+      "require": "./lowcode_lib/meta.js",
+      "import": "./lowcode_es/meta.js"
+    },
+    "./prototypeView": {
+      "require": "./lowcode_lib/view.js",
+      "import": "./lowcode_es/view.js"
     }
   },
   "typings": "types/index.d.ts",
@@ -75,7 +83,8 @@
     "@alifd/next": "^1.25.27",
     "prop-types": "^15.5.8",
     "react": "^16.x",
-    "react-dom": "^16.x"
+    "react-dom": "^16.x",
+    "@babel/runtime": "^7.0.0"
   },
   "acceptDependencies": {
     "webpack": "^4.46.x"
@@ -84,9 +93,11 @@
     "webpack": "^4.46.x"
   },
   "componentConfig": {
-    "isComponentLibrary": true
+    "isComponentLibrary": true,
+    "materialSchema": "https://unpkg.com/material-page-cxy@0.1.1/build/lowcode/assets-prod.json"
   },
   "lcMeta": {
     "type": "component"
-  }
+  },
+  "homepage": "https://unpkg.com/material-page-cxy@0.1.1/build/index.html"
 }
