@@ -11,7 +11,7 @@ const PageLoginMeta: IPublicTypeComponentMetadata = {
   "devMode": "proCode",
   "npm": {
     "package": "material-page-cxy",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "exportName": "PageLogin",
     "main": "src\\index.tsx",
     "destructuring": true,

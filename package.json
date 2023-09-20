@@ -1,6 +1,6 @@
 {
   "name": "material-page-cxy",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "material-page-cxy",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -94,10 +94,10 @@
   },
   "componentConfig": {
     "isComponentLibrary": true,
-    "materialSchema": "https://unpkg.com/material-page-cxy@0.1.1/build/lowcode/assets-prod.json"
+    "materialSchema": "https://unpkg.com/material-page-cxy@0.1.2/build/lowcode/assets-prod.json"
   },
   "lcMeta": {
     "type": "component"
   },
-  "homepage": "https://unpkg.com/material-page-cxy@0.1.1/build/index.html"
+  "homepage": "https://unpkg.com/material-page-cxy@0.1.2/build/index.html"
 }
