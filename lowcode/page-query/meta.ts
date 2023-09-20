@@ -29,15 +29,8 @@ const PageLoginMeta: IPublicTypeComponentMetadata = {
         },
         "name": "tableData",
         "setter": {
-          "componentName": "ArraySetter",
-          "props": {
-            "itemSetter": {
-              "componentName": "JsonSetter",
-            }
-          },
-          "initialValue": [
-            "{\"name\":\"品牌营销服务设计\",\"demand\":\"阮小五\"}"
-          ]
+          "componentName": "JsonSetter",
+          "initialValue": [{ "name": "品牌营销服务设计", "demand": "阮小五" }, { "name": "品牌营销服务设计2", "demand": "阮小六" }]
         }
       },
       {
@@ -69,15 +62,15 @@ const PageLoginMeta: IPublicTypeComponentMetadata = {
                 }
               },
               "initialValue": {
-                "formItemOptions": "{\"label\":\"需求名称\"}",
-                "widgetOptions": "{\"type\":\"input\",\"placeholder\":\"请输入需求名称\"}"
+                "formItemOptions": { "label": "需求名称" },
+                "widgetOptions": { "type": "input", "placeholder": "请输入需求名称" }
               }
             }
           },
           "initialValue": [
             {
-              "formItemOptions": "{\"label\":\"需求名称\"}",
-              "widgetOptions": "{\"type\":\"input\",\"placeholder\":\"请输入需求名称\"}"
+              "formItemOptions": { "label": "需求名称" },
+              "widgetOptions": { "type": "input", "placeholder": "请输入需求名称" }
             }
           ]
         }
@@ -106,9 +99,14 @@ const PageLoginMeta: IPublicTypeComponentMetadata = {
                   {
                     "name": "type",
                     "description": "按钮样式类型",
-                    "setter": "RadioGroupSetter",
-                    "options": ["primary", "secondary", "normal"],
-                    "defaultValue": "normal"
+                    "setter": {
+                      "componentName": "SelectSetter",
+                      "props": {
+                        "mode": "single",
+                        "options": ["primary", "secondary", "normal"].map(t => ({ title: t, value: t })),
+                      },
+                      "initialValue": "normal"
+                    },
                   },
                   {
                     "name": "buttonText",
@@ -157,9 +155,14 @@ const PageLoginMeta: IPublicTypeComponentMetadata = {
                   {
                     "name": "type",
                     "description": "按钮样式类型",
-                    "setter": "RadioGroupSetter",
-                    "options": ["primary", "secondary", "normal"],
-                    "defaultValue": "normal"
+                    "setter": {
+                      "componentName": "SelectSetter",
+                      "props": {
+                        "mode": "single",
+                        "options": ["primary", "secondary", "normal"].map(t => ({ title: t, value: t })),
+                      },
+                      "initialValue": "normal"
+                    },
                   },
                   {
                     "name": "buttonText",
@@ -212,8 +215,8 @@ const PageLoginMeta: IPublicTypeComponentMetadata = {
             }
           },
           "initialValue": {
-            "options": "{}",
-            "columns": "[{\"title\":\"品牌营销服务设计\",\"dataIndex\":\"name\"},{\"title\":\"需求方\",\"dataIndex\":\"demand\"}]"
+            "options": {},
+            "columns": [{"title":"品牌营销服务设计","dataIndex":"name"},{"title":"需求方","dataIndex":"demand"}]
           }
         }
       }

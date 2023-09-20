@@ -8,8 +8,8 @@ const FormItem = Form.Item;
 
 // 单个表单配置
 export interface tFormOption {
-  formItemOptions: string;//Object;
-  widgetOptions: string;//Object;
+  formItemOptions: any;//Object;
+  widgetOptions: any;//Object;
 };
 // 单个按钮配置
 export interface tButtonOption {
@@ -24,8 +24,8 @@ type tColumn = {
 };
 // 表格配置
 export interface tTableOption {
-  options: string;//Object;//Table props
-  columns: string;//Array<tColumn>;//表格列配置
+  options: any;//Object;//Table props
+  columns: Array<tColumn>;//Array<tColumn>;//表格列配置
 };
 
 export interface PageQueryProps {
@@ -55,16 +55,16 @@ const WidgetRender = (props: any): JSX.Element => {
 const PageQuery: React.FC<PageQueryProps> = function (props: PageQueryProps) {
 
   const formOptions = (props?.formOptions || []).map(op => ({
-    formItemOptions: JSON.parse(op?.formItemOptions || '{}'),
-    widgetOptions: JSON.parse(op?.widgetOptions || '{}'),
+    formItemOptions: op?.formItemOptions || {},
+    widgetOptions: op?.widgetOptions || {},
   }));
   const formButtonOptions = props.formButtonOptions || [];
   const toolButtonOptions = props.toolButtonOptions || [];
   const tableOptions = {
-    options: JSON.parse(props.tableOptions?.options || '{}'),
-    columns: JSON.parse(props.tableOptions?.columns || '[]'),
+    options: props.tableOptions?.options || {},
+    columns: props.tableOptions?.columns || [],
   };
-  const tableData = (props.tableData || []).map(d => JSON.parse(d || ''));
+  const tableData = props.tableData || [];
 
   const [loading, setLoading] = useState(true);
   const [expand, setExpand] = useState(false);
